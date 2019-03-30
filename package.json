@@ -1,0 +1,12 @@
+{
+  "name": "coding-enterprise-notice",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "build": "tsc -p ."
+  },
+  "dependencies": {
+    "@blueprintjs/core": "^3.14.1"
+  }
+}

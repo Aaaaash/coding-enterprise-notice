@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>CODING 企业版</title>
+  <link href="https://unpkg.com/normalize.css@^7.0.0" rel="stylesheet" />
+  <link href="https://unpkg.com/@blueprintjs/icons@^3.4.0/lib/css/blueprint-icons.css" rel="stylesheet" />
+  <link href="https://unpkg.com/@blueprintjs/core@^3.10.0/lib/css/blueprint.css" rel="stylesheet" />
+</head>
+<style>
+  .container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .main-body {
+    flex: 1;
+    margin-top: 50px;
+  }
+
+  .divider {
+    margin: 15px 0;
+  }
+</style>
+
+<body>
+  <div class="container">
+    <nav class="bp3-navbar bp3-dark">
+      <div style="margin: 0 auto; width: 480px;">
+        <!-- ADD ME -->
+        <div class="bp3-navbar-group bp3-align-left">
+          <div class="bp3-navbar-heading">CODING 企业版通知</div>
+        </div>
+        <div class="bp3-navbar-group bp3-align-right">
+          <button class="coding-home bp3-button bp3-minimal bp3-icon-home">Home</button>
+          <span class="bp3-navbar-divider"></span>
+          <button class="coding-user bp3-button bp3-minimal bp3-icon-user"></button>
+          <button class="coding-notice bp3-button bp3-minimal bp3-icon-notifications"></button>
+        </div>
+      </div>
+    </nav>
+    <div class="main-body bp3-form-group .modifier">
+      <label class="bp3-label" for="form-group-input">
+        选择通知类型
+        <span class="bp3-text-muted">(默认为全部)</span>
+      </label>
+      <div class="bp3-form-content">
+        <label class="bp3-control bp3-checkbox .modifier">
+          <input class="coding-checkbox" data-type="MergeRequestBean" type="checkbox" :modifier />
+          <span class="bp3-control-indicator"></span>
+          合并请求
+        </label>
+        <label class="bp3-control bp3-checkbox .modifier">
+          <input class="coding-checkbox" data-type="Task" type="checkbox" :modifier />
+          <span class="bp3-control-indicator"></span>
+          任务
+        </label>
+        <label class="bp3-control bp3-checkbox .modifier">
+          <input class="coding-checkbox" data-type="ProjectTweet" type="checkbox" :modifier />
+          <span class="bp3-control-indicator"></span>
+          项目公告
+        </label>
+        <label class="bp3-control bp3-checkbox .modifier">
+          <input class="coding-checkbox" data-type="CommitLineNote" type="checkbox" :modifier />
+          <span class="bp3-control-indicator"></span>
+          评论
+        </label>
+        <label class="bp3-control bp3-checkbox .modifier">
+            <input class="coding-checkbox" data-type="CiBuild" type="checkbox" :modifier />
+            <span class="bp3-control-indicator"></span>
+            持续集成
+          </label>
+        <div class="divider bp3-menu-divider"></div>
+        <label class="bp3-label .modifier">
+          轮询频率
+          <span class="bp3-text-muted">(分钟)</span>
+          <input :modifier class="coding-frequency bp3-input" style="width: 200px;" type="text" placeholder="Text input" dir="auto" />
+        </label>
+        <div class="divider bp3-menu-divider"></div>
+        <button type="button" class="coding-save bp3-button bp3-intent-primary bp3-icon-saved .modifier" :modifier>保存</button>
+        <button type="button" class="coding-restore bp3-button bp3-intent-primary bp3-icon-saved .modifier" :modifier>恢复默认值</button>
+      </div>
+    </div>
+  </div>
+</body>
+<script src="./out/options.js"></script>
+
+</html>

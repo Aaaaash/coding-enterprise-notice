@@ -1,0 +1,54 @@
+{
+  "manifest_version": 2,
+  "name": "coding-enterprise-notice",
+  "version": "0.0.1",
+  "description": "CODING 企业版通知",
+  "icons": {
+    "16": "img/icon.png",
+    "48": "img/icon.png",
+    "128": "img/icon.png"
+  },
+  "background": {
+    "scripts": [
+      "out/index.js"
+    ]
+  },
+  "browser_action": {
+    "default_icon": "img/icon.png",
+    "default_title": "CODING 企业版消息通知",
+    "default_popup": "settings.html"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": [
+        "out/index.js"
+      ],
+      "css": [
+        "style/main.css"
+      ],
+      "run_at": "document_start"
+    }
+  ],
+  "permissions": [
+    "contextMenus",
+    "notifications",
+    "webRequest",
+    "webRequestBlocking",
+    "storage",
+    "http://*/*",
+    "https://*/*"
+  ],
+  "web_accessible_resources": [
+    "js/inject.js"
+  ],
+  "homepage_url": "https://www.baidu.com",
+  "options_page": "options.html",
+  "omnibox": {
+    "keyword": "CODING"
+  },
+  "default_locale": "zh_CN",
+  "devtools_page": "devtools.html"
+}
