@@ -109,7 +109,7 @@ async function handleNotification() {
               while ((temp = matchUrl.exec(content)) != null) {
                 urls.push(temp[1]);
               }
-              console.log(urls);
+
               return {
                 id,
                 title: NotificationMessages[target_type],
