@@ -8,6 +8,7 @@ enum NocitifacitionTypes {
   CommitLineNote = "CommitLineNote",
   ProjectTweet = "ProjectTweet",
   CiBuild = "CiBuild",
+  TaskComment = "TaskComment"
 }
 
 interface IMessages {
@@ -20,15 +21,9 @@ const NotificationMessages: IMessages = {
   CommitLineNote: "评论",
   ProjectTweet: "项目公告",
   CiBuild: "持续集成",
+  TaskComment: "任务评论"
 }
 
-const TargetUrl: { [prop: string]: string } = {
-  MergeRequestBean: "git/merge",
-  Task: "任务提醒",
-  CommitLineNote: "评论",
-  ProjectTweet: "项目公告",
-  CiBuild: "持续集成",
-}
 
 interface INoticeDetail {
   content: string;
@@ -66,7 +61,7 @@ const matchTag = /<[^>]+>/gim;
 
 let initialState: ICodingStorage = {
   frequency: 5,
-  checked: ["MergeRequestBean", "Task", "CommitLineNote", "ProjectTweet", "CiBuild"],
+  checked: ["MergeRequestBean", "Task", "CommitLineNote", "ProjectTweet", "CiBuild", "TaskComment"],
 }
 
 function throwErrNotice() {
