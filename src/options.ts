@@ -5,7 +5,7 @@ const STORAGE_UPDATE = "CODING-ENTERPRISE-STORAGE-UPDATE";
 
 let initialStorage: ICodingStorage = {
   frequency: 5,
-  checked: ["MergeRequestBean", "Task", "CommitLineNote", "ProjectTweet", "CiBuild", "TaskComment"],
+  checked: ["MergeRequestBean", "Task", "CommitLineNote", "ProjectTweet", "CiBuild", "TaskComment", "Requirement"],
 }
 
 function initialize(storage: ICodingStorage) {
