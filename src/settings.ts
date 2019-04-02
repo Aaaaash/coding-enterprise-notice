@@ -45,7 +45,7 @@ function bindSettingsEvent() {
   const settingsContainer = document.querySelector(".coding-settings");
 
   settingsContainer!.addEventListener("click", () => {
-    window.open("chrome-extension://hifdllnemgpmgfdpfmlkpgofoefepfda/options.html");
+    window.open("https://codingcorp.coding.net/user/account/setting/notification");
   });
 }
 
