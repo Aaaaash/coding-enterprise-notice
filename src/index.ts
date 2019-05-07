@@ -63,7 +63,7 @@ const matchTag = /<[^>]+>/gim;
 
 let initialState: ICodingStorage = {
   frequency: 5,
-  checked: ["MergeRequestBean", "Task", "CommitLineNote", "ProjectTweet", "CiBuild", "TaskComment", "Requirement"],
+  checked: ["MergeRequestBean", "Task", "CommitLineNote", "ProjectTweet", "CiBuild", "TaskComment", "Requirement", "Defect", "Iteration"],
 }
 
 function throwErrNotice() {
